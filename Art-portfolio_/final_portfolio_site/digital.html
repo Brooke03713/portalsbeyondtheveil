@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Creations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Digital Creations</h1>
+</header>
+<main>
+  
+  
+        <p>Gallery of digital art. Click images to enlarge.</p>
+        <div class="gallery">
+          <img src="art1.jpg" alt="Artwork 1" onclick="openLightbox(this)">
+          <img src="art2.jpg" alt="Artwork 2" onclick="openLightbox(this)">
+          <img src="art3.jpg" alt="Artwork 3" onclick="openLightbox(this)">
+        </div>
+        
+</main>
+<footer>
+  <p>&copy; 2025 Brooke SC</p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+
+<script>
+function openLightbox(img) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
